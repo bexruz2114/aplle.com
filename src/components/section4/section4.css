@@ -1,0 +1,67 @@
+.apple-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  min-width: 300px;
+}
+
+.card {
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
+  padding: 20px;
+  width: 100%;
+}
+
+.overlay h2 {
+  margin: 0 0 10px 0;
+  font-size: 22px;
+}
+
+.overlay p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.buttons button {
+  margin-right: 10px;
+  background-color: #0071e3;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.buttons button:hover {
+  background-color: #005bb5;
+}

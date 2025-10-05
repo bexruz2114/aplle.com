@@ -1,0 +1,156 @@
+/* Slider.css */
+
+.slider-section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 60px auto;
+  padding: 0 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Swiper o'zini 100% qilamiz */
+.mySwiper {
+  width: 100%;
+  height: 670px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Har bir slide fon rasmi */
+.slide {
+  display: flex !important;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 60px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+}
+
+/* Gradient overlay fon uchun */
+.slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.75) 30%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  z-index: 0;
+  transition: background 0.5s ease;
+}
+
+/* Slide ichidagi content */
+.slide-content {
+  position: relative;
+  z-index: 1;
+  max-width: 450px;
+}
+
+/* Sarlavha */
+.slide-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  transition: transform 0.4s ease;
+}
+
+/* Tavsif */
+.slide-content p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+  font-weight: 500;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+  transition: transform 0.4s ease;
+}
+
+/* Tugma */
+.slide-content button {
+  background: #0071e3;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 113, 227, 0.5);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Tugma hover */
+.slide-content button:hover {
+  background: #005bb5;
+  transform: translateY(-3px);
+}
+
+/* Hover effekti: sarlavha va tavsif biroz yuqoriga siljiydi */
+.slide:hover .slide-content h1,
+.slide:hover .slide-content p {
+  transform: translateY(-10px);
+}
+
+/* Pagination styles */
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #0071e3;
+}
+
+/* Navigation arrow styles */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.7));
+  transition: color 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #0071e3;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .slide-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .slide-content p {
+    font-size: 1rem;
+  }
+
+  .mySwiper {
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-content {
+    max-width: 300px;
+  }
+
+  .slide-content h1 {
+    font-size: 2rem;
+  }
+
+  .slide-content p {
+    font-size: 0.9rem;
+  }
+
+  .mySwiper {
+    height: 350px;
+    padding-left: 20px;
+  }
+}
