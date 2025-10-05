@@ -42,3 +42,42 @@ margin-left: 37%;
     color:  rgb(34, 105, 247);
     margin-top: 21px;
 }
+/* Planshet va kichik ekranlar uchun */
+@media (max-width: 768px) {
+    .container {
+        height: auto; /* balandlikni avtomatik qilish, rasm esa cover bo'lib qoladi */
+        padding: 50px 20px;
+    }
+    .intro {
+        margin-left: 10%; /* markazlashtirish uchun */
+        padding-top: 40px;
+        text-align: center; /* matnni markazlashtirish */
+    }
+    .intro h1 {
+        font-size: 40px;
+    }
+    .intro h4 {
+        font-size: 24px;
+        margin-left: 0;
+    }
+    #btn1, #btn2 {
+        width: 80%;  /* tugmalarni kengaytirish */
+        margin: 10px auto;
+        display: block;
+        font-size: 18px;
+    }
+}
+
+/* Mobil uchun (480px dan kichik) */
+@media (max-width: 480px) {
+    .intro h1 {
+        font-size: 30px;
+    }
+    .intro h4 {
+        font-size: 18px;
+    }
+    #btn1, #btn2 {
+        font-size: 16px;
+        padding: 12px 30px;
+    }
+}

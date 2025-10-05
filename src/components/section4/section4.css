@@ -65,3 +65,52 @@
 .buttons button:hover {
   background-color: #005bb5;
 }
+/* Planshet va kichik ekranlar uchun */
+@media (max-width: 768px) {
+  .apple-section {
+    flex-direction: column; /* kartalarni ustma-ust joylashtirish */
+    padding: 20px;
+  }
+  
+  .column {
+    min-width: 100%; /* har bir ustun to‘liq kenglikda */
+    flex: none; /* ustun uchun flex o‘zgarishni bekor qilish */
+    gap: 15px;
+  }
+  
+  .card {
+    height: auto; /* balandlikni avtomatik qilish */
+    min-height: 250px;
+  }
+  
+  .overlay h2 {
+    font-size: 20px;
+  }
+  
+  .overlay p {
+    font-size: 14px;
+  }
+  
+  .buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 100%; /* tugmani kengaytirish */
+  }
+}
+
+/* Juda kichik ekranlar uchun */
+@media (max-width: 480px) {
+  .overlay h2 {
+    font-size: 18px;
+  }
+  
+  .overlay p {
+    font-size: 13px;
+  }
+  
+  .buttons button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}

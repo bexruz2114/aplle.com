@@ -46,3 +46,44 @@ margin-left: 37%;
     margin-top: 21px;
 }
 
+/* Planshet va kichik ekranlar uchun */
+@media (max-width: 768px) {
+    .container2 {
+        height: auto; /* balandlikni avtomatik qilish */
+        padding: 40px 20px;
+        margin-top: 10px;
+    }
+    .air {
+        margin-left: 10%; /* o‘ngga siljishini kamaytiramiz */
+        padding-top: 40px;
+        text-align: center; /* matnni markazlashtirish */
+    }
+    .air h1 {
+        font-size: 40px;
+    }
+    .air h3 {
+        font-size: 24px;
+        margin-left: 0; /* chapga siljish olib tashlanadi */
+        font-weight: 400;
+    }
+    #btn1, #btn2 {
+        width: 80%; /* tugmalarni kengaytirish */
+        margin: 10px auto;
+        display: block;
+        font-size: 18px;
+    }
+}
+
+/* Mobil uchun (480px dan kichik) */
+@media (max-width: 480px) {
+    .air h1 {
+        font-size: 30px;
+    }
+    .air h3 {
+        font-size: 18px;
+    }
+    #btn1, #btn2 {
+        font-size: 16px;
+        padding: 12px 30px;
+    }
+}

@@ -34,3 +34,40 @@
     font-size: 25px;
     color: #fff;
 }
+/* Kichik ekranlar uchun (mobil, planshet) */
+@media (max-width: 768px) {
+    .nav {
+        height: auto;
+        padding: 10px 0;
+        justify-content: flex-start;
+    }
+    .nav ul {
+        flex-direction: column; /* menyuni ustma-ust qilish */
+        align-items: flex-start;
+        width: 100%;
+    }
+    .nav ul li {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+    .icon1, .icon2, .icon3 {
+        font-size: 20px;
+        margin: 10px 15px 10px 0;
+    }
+}
+
+/* Juda kichik ekranlar uchun (mobil) */
+@media (max-width: 480px) {
+    .nav {
+        height: auto;
+        padding: 8px 10px;
+    }
+    .nav ul li {
+        font-size: 14px;
+        margin: 8px 0;
+    }
+    .icon1, .icon2, .icon3 {
+        font-size: 18px;
+        margin: 8px 10px 8px 0;
+    }
+}
